@@ -61,9 +61,9 @@ User requests media generation
 ## PROVIDER 1: Cloudflare Workers AI
 
 ### Setup (Already Done)
-the user's Cloudflare account is connected via MCP:
-- Account: `Stanley215ai@gmail.com`
-- Account ID: `b2bd77c2d73a1222b26b57ed308e92e7`
+Your Cloudflare account is connected via MCP:
+- Account: `your-email@example.com`
+- Account ID: `your-cloudflare-account-id`
 
 The MCP connector handles all authentication. No API key needed.
 
@@ -71,7 +71,7 @@ The MCP connector handles all authentication. No API key needed.
 Set the active Cloudflare account:
 ```
 Call: Cloudflare Developer Platform:set_active_account
-Param: activeAccountIdParam = "b2bd77c2d73a1222b26b57ed308e92e7"
+Param: activeAccountIdParam = "your-cloudflare-account-id"
 ```
 
 ### Available Image Models
@@ -86,7 +86,7 @@ Param: activeAccountIdParam = "b2bd77c2d73a1222b26b57ed308e92e7"
 
 **Method A: Deploy a Worker (best for repeated use)**
 
-Deploy this Worker to the user's Cloudflare account once. Then call it via HTTP from anywhere — Claude.ai, Mac mini, n8n, or any agent.
+Deploy this Worker to your Cloudflare account once. Then call it via HTTP from anywhere — Claude.ai, Mac mini, n8n, or any agent.
 
 ```javascript
 // Worker: ai-image-gen
@@ -132,10 +132,10 @@ binding = "AI"
 
 **Method B: Direct REST API call (from Mac mini or scripts)**
 ```bash
-curl -X POST "https://api.cloudflare.com/client/v4/accounts/b2bd77c2d73a1222b26b57ed308e92e7/ai/run/@cf/black-forest-labs/flux-2-klein-9b" \
+curl -X POST "https://api.cloudflare.com/client/v4/accounts/your-cloudflare-account-id/ai/run/@cf/black-forest-labs/flux-2-klein-9b" \
   -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
   -H "Content-Type: multipart/form-data" \
-  --form "prompt=a photorealistic sunset over Michigan" \
+  --form "prompt=a photorealistic sunset over a lake" \
   --form "width=1024" \
   --form "height=1024" \
   --output image.png
@@ -146,7 +146,7 @@ If the Worker is deployed, Claude can call it via HTTP:
 ```python
 import requests
 resp = requests.post("https://ai-image-gen.<your-subdomain>.workers.dev", json={
-    "prompt": "a photorealistic sunset over Michigan",
+    "prompt": "a photorealistic sunset over a lake",
     "width": 1024,
     "height": 1024
 })
@@ -276,9 +276,9 @@ This skill chains with other skills:
 
 ### Style Presets
 
-**the user's business:**
-- Professional photography, warm lighting, Michigan landscapes
-- Home interiors, families, clean white/blue palette
+**Your Business:**
+- Professional photography, warm lighting, local landscapes
+- Clean, trustworthy palette matching your brand
 - NEVER: cartoonish, AI-looking, stock photo clichés
 
 **StanleyAI:**
@@ -300,7 +300,7 @@ This skill chains with other skills:
 ```
 [Subject] + [Style] + [Lighting] + [Composition] + [Mood] + [Technical]
 ```
-Example: "A Michigan lakehouse at golden hour, warm editorial photography, shallow depth of field, centered composition, peaceful mood, 4K, photorealistic"
+Example: "A lakehouse at golden hour, warm editorial photography, shallow depth of field, centered composition, peaceful mood, 4K, photorealistic"
 
 ### Video Prompts
 - Camera movements: "slow dolly zoom", "overhead crane shot", "tracking shot"

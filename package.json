@@ -24,19 +24,21 @@
   "bin": {
     "create-stanley-ai": "./bin/cli.js"
   },
+  "main": "src/index.js",
   "type": "module",
   "engines": {
     "node": ">=18.0.0"
   },
   "files": [
     "bin/",
+    "src/",
     "templates/"
   ],
   "scripts": {
     "start": "node bin/cli.js",
     "dev": "node bin/cli.js --dev",
-    "doctor": "node bin/cli.js doctor",
-    "update": "node bin/cli.js update"
+    "doctor": "node src/doctor.js",
+    "update": "node src/update.js"
   },
   "dependencies": {}
 }

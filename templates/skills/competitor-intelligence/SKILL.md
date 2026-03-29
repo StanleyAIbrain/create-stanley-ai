@@ -1,6 +1,6 @@
 ---
 name: competitor-intelligence
-description: Research any competitor, market player, or industry leader using Claude's web search to extract their pricing, content strategy, sales funnel, positioning, and gaps. Use whenever the user asks about competitors, wants to research someone in their industry, asks "what are others doing", or needs market intelligence. Also triggers for the user's business competitor research, StanleyAI framework comparisons, or crypto trading strategy research.
+description: Research any competitor, market player, or industry leader using Claude's web search to extract their pricing, content strategy, sales funnel, positioning, and gaps. Use whenever the user asks about competitors, wants to research someone in their industry, asks "what are others doing", or needs market intelligence. Also triggers for business competitor research, framework comparisons, or trading strategy research.
 ---
 
 # Competitor Intelligence Skill
@@ -34,15 +34,15 @@ Goal: [What you want to do with this intel]
 Output: Structured report with actionable recommendations
 ```
 
-## the user's Three Research Domains
+## Example Research Domains
 
-### Domain 1: the user's business Competitors
-Research local mortgage brokers and online lenders competing for Michigan homebuyers.
+### Domain 1: Local Business Competitors
+Research local competitors in your industry competing for customers in your area.
 
 Target competitors to research:
-- Local mortgage brokers in Farmington Hills / Oakland County
-- Online lenders: Rocket Mortgage, Better.com, loanDepot
-- Other wholesale brokers in Metro Detroit
+- Local businesses in your city / your county
+- National online competitors in your industry
+- Other providers in your metro area
 
 What to extract:
 - Their rate marketing and lead gen approach
@@ -65,7 +65,7 @@ What to extract:
 - Unique positioning angles they own
 - What's missing that StanleyAI could own
 
-### Domain 3: SATOSHI Crypto Research
+### Domain 3: Crypto Trading Research
 Research trading strategies, on-chain analysts, and market frameworks.
 
 What to extract:
@@ -112,6 +112,6 @@ Every competitor research returns:
 ## Advanced Research Moves
 
 **Multi-competitor comparison:** Research 3 competitors and produce a comparison matrix
-**Trend analysis:** "Research what the top 5 mortgage brokers in Michigan are doing for lead gen in 2026"
+**Trend analysis:** "Research what the top 5 [competitors] in [your state] are doing for lead gen in [year]"
 **Strategy steal:** "Research how [Competitor] grew from 0 to [milestone] and extract the playbook"
 **Gap finder:** "Research all Claude agent frameworks and tell me what none of them are doing"

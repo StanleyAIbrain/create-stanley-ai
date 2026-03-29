@@ -4,7 +4,7 @@ description: >
   Apply GSD-2 context engineering patterns when planning or executing complex multi-step
   builds, features, or projects. Use whenever the user describes something to build with
   more than 2 phases, asks to plan a milestone, or says "let's build X from scratch."
-  Also activates for any StanleyAI feature, SATOSHI build, or Atlantis automation that
+  Also activates for any framework feature, trading build, or business automation that
   needs structured decomposition. This skill gives Claude the GSD-2 mindset: fresh
   context per task, pre-loaded artifacts, atomic commits, state-on-disk. Trigger on:
   "build", "plan this out", "milestone", "let's map this", "how do we approach",
@@ -15,7 +15,7 @@ description: >
 
 You are applying GSD-2's context engineering discipline to plan and execute complex builds.
 This is not a software framework — it's a thinking model. Apply it to any domain:
-code, automation, SATOSHI strategy, mortgage business systems, content pipelines.
+code, automation, trading strategy, business systems, content pipelines.
 
 ---
 
@@ -76,10 +76,10 @@ Every task needs three types of must-haves defined BEFORE execution:
 
 **Truths** — Observable behaviors that must be true when done:
 > "User can submit a form and receive a confirmation email"
-> "SATOSHI cron runs every 4 hours and logs to /var/log/satoshi.log"
+> "Trading system cron runs every 4 hours and logs to /var/log/trading.log"
 
 **Artifacts** — Files that must exist with real implementation (no stubs, no TODOs):
-> "`src/agents/satoshi/funding-scanner.ts` — fully implemented, not a placeholder"
+> "`src/agents/trading/funding-scanner.ts` — fully implemented, not a placeholder"
 > "`~/stanley-ai/agents/zoe-minnie/config.yaml` — valid YAML with all required keys"
 
 **Key Links** — The wiring between artifacts:
@@ -159,7 +159,7 @@ Branch per slice. Squash merge to main when the slice completes.
 
 ```
 main:
-  feat(M001/S02): SATOSHI funding rate scanner
+  feat(M001/S02): funding rate scanner
   feat(M001/S01): Hyperliquid API integration layer
 
 gsd/M001/S01 (preserved, not deleted):
@@ -207,11 +207,11 @@ structure is confirmed. The plan IS the first deliverable.
 
 ---
 
-## the user-Specific Patterns
+## Example Patterns
 
-**StanleyAI builds:** Always Milestone = "X agents running cleanly" or "feature Y shipped"
-**SATOSHI builds:** Always Milestone = "live trading with strategy X" or "backtests complete"
-**Atlantis:** Always Milestone = "workflow automated end-to-end" or "lead system live"
+**Framework builds:** Always Milestone = "X agents running cleanly" or "feature Y shipped"
+**Trading builds:** Always Milestone = "live trading with strategy X" or "backtests complete"
+**Business automation:** Always Milestone = "workflow automated end-to-end" or "lead system live"
 
 When the user says "let's build X" — immediately ask one question only:
 > "What does DONE look like for this milestone?"
@@ -225,7 +225,7 @@ That answer defines the Milestone. Everything else flows from it.
 - Not a software framework to install
 - Not a set of slash commands
 - Not Claude Code-specific (it's a thinking model)
-- Not a replacement for OpenClaw or SATOSHI orchestration
+- Not a replacement for your orchestration layer
 
 It's how we think about work before we do the work.
 The structure prevents wasted effort. The artifacts prevent lost context.

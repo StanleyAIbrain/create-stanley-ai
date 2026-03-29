@@ -98,7 +98,7 @@ What credentials to configure (which OAuth connections, API keys needed).
 [Schedule: Every 15 min]
 → [HTTP: Fetch BTC price]
 → [IF: Price > threshold OR < floor]
-→ [Claude API: Analyze SATOSHI signal]
+→ [Claude API: Analyze trading signal]
 → [Telegram: Send trade alert]
 ```
 

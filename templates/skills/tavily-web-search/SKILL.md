@@ -1,6 +1,6 @@
 ---
 name: tavily-web-search
-description: Real-time web search via Tavily API for research, news, content pipelines, fact-checking, and competitor intelligence. Use whenever Claude needs current information from the web, the user asks to research a topic, needs up-to-date data, wants to fact-check a claim, or any content pipeline step requires live web data. Triggers on "search for", "look up", "what's the latest on", "research this", "find current info", "fact check", "is this true", or any request where Claude's training data may be outdated. Also triggers when chaining into content pipelines — e.g. research → write → generate image → publish. Activate aggressively for any request that benefits from real-time web data, including StanleyAI content engine research, the user's business market intel, and SATOSHI crypto market analysis.
+description: Real-time web search via Tavily API for research, news, content pipelines, fact-checking, and competitor intelligence. Use whenever Claude needs current information from the web, the user asks to research a topic, needs up-to-date data, wants to fact-check a claim, or any content pipeline step requires live web data. Triggers on "search for", "look up", "what's the latest on", "research this", "find current info", "fact check", "is this true", or any request where Claude's training data may be outdated. Also triggers when chaining into content pipelines — e.g. research → write → generate image → publish. Activate aggressively for any request that benefits from real-time web data, including StanleyAI content engine research, the user's business market intel, and crypto market analysis.
 ---
 
 # Tavily Web Search
@@ -117,7 +117,7 @@ Search 3: "[competitor name] services offerings"
 ```
 Use `include_domains` to lock to review sites, or `exclude_domains` to skip competitor's own site.
 
-### Crypto/SATOSHI market research
+### Crypto market research
 ```
 Search 1: "bitcoin price analysis today" (topic: finance)
 Search 2: "crypto market sentiment March 2026" (topic: news)
@@ -157,4 +157,4 @@ Search 3: "[specific altcoin] technical analysis" (topic: finance)
 - **Nano Banana Pro** → research visual trends before generating images
 - **Twitter Thread Writer** → research viral examples and current data for threads
 - **SEO Research Bot** → Tavily powers real-time SERP analysis
-- **SATOSHI** → live market data and sentiment for trading decisions
+- **trading system** → live market data and sentiment for trading decisions

@@ -1,17 +1,17 @@
 ---
 name: seo-research-bot
-description: Build and run SEO research systems for the user's business and StanleyAI. Analyzes keywords, competitor content, local search rankings, Google Business presence, and mortgage-specific search opportunities. Use whenever the user asks about SEO, search rankings, keywords, competitors, Google Business, local search, content strategy for search, or "what should I be writing about." Triggers on any mortgage marketing, local Michigan SEO, or StanleyAI GitHub discoverability question.
+description: Build and run SEO research systems for the user's business and products. Analyzes keywords, competitor content, local search rankings, Google Business presence, and industry-specific search opportunities. Use whenever the user asks about SEO, search rankings, keywords, competitors, Google Business, local search, content strategy for search, or "what should I be writing about." Triggers on any local SEO or product discoverability question.
 ---
 
 # SEO Research Bot Skill
 
-Automated SEO intelligence for the user's business (local Michigan mortgage broker) and StanleyAI (GitHub open-source product).
+Automated SEO intelligence for your business (local service provider) and your products (GitHub, SaaS, etc.).
 
 ## Two Separate SEO Worlds
 
 ### World 1: the user's business — Local SEO
-Goal: Rank #1 in Farmington Hills / Oakland County / Metro Detroit for mortgage searches
-Primary keywords: "mortgage broker Farmington Hills", "mortgage broker Michigan", "home loan Farmington Hills", "refinance Michigan", "FHA loan Oakland County"
+Goal: Rank #1 in your city / your county / your metro area for your industry searches
+Primary keywords: "[your industry] [your city]", "[your service] [your state]", "[your specialty] [your county]"
 
 ### World 2: StanleyAI — Developer SEO + GitHub
 Goal: Drive GitHub stars via Google, dev blogs, Hacker News, Reddit
@@ -37,15 +37,15 @@ When the user asks "what should I rank for":
 1. **Seed keywords** from his business context
 2. **Expand** to related terms, questions, local modifiers
 3. **Cluster** by intent:
-   - Informational: "what is FHA loan" (blog content)
-   - Commercial: "best mortgage broker Michigan" (landing page)
-   - Transactional: "apply for mortgage Farmington Hills" (conversion page)
-   - Local: "mortgage broker near me Farmington Hills" (GBP + local page)
+   - Informational: "what is [your service]" (blog content)
+   - Commercial: "best [your industry] [your state]" (landing page)
+   - Transactional: "[action] [your service] [your city]" (conversion page)
+   - Local: "[your industry] [your city]" (GBP + local page)
 4. **Priority matrix**: Monthly search volume × competition difficulty × business relevance
 5. **Content calendar**: Which keywords to target this month
 
 ### Workflow 3: Local SEO Audit
-the user's business specific:
+Your business specific:
 
 Check:
 - Google Business Profile completeness (hours, photos, posts, Q&A)
@@ -53,19 +53,19 @@ Check:
 - Review velocity and response rate
 - Local schema markup on website
 - "Near me" keyword coverage
-- Neighborhood pages (Farmington Hills, West Bloomfield, Novi, Troy, Birmingham)
+- Neighborhood pages (your city, your neighboring city, neighboring cities)
 
 ### Workflow 4: Content Gap Analysis
-What content should the user's business have that it doesn't:
+What content should your business have that it doesn't:
 
-Common mortgage content that ranks:
-- "How much house can I afford in Michigan [year]"
-- "FHA vs conventional loan Michigan"
-- "First-time homebuyer programs Michigan"
-- "Refinance rates Michigan today"
-- "USDA loan Michigan eligibility"
-- "VA loan Michigan lenders"
-- "Down payment assistance Michigan"
+Common local service content that ranks:
+- "How to [common question] in [your state] [year]"
+- "[Service A] vs [Service B] [your state]"
+- "[Your industry] programs [your state]"
+- "[Your service] rates [your state] today"
+- "[Specialty service] [your state] eligibility"
+- "[Your industry] [your state] providers"
+- "[Incentive/assistance programs] [your state]"
 
 ### Workflow 5: StanleyAI GitHub SEO
 For the open-source product:
@@ -78,7 +78,7 @@ README optimization:
 - Use case section with specific keywords
 
 External content:
-- Dev.to article: "How I automated my mortgage business with Claude AI"
+- Dev.to article: "How I automated my business with Claude AI"
 - Medium: "Building a multi-agent system without coding"
 - Hashnode: "StanleyAI vs other Claude frameworks"
 - Reddit r/selfhosted, r/MachineLearning posts
@@ -89,7 +89,7 @@ Apify has actors that pull live search data:
 
 ```
 Actor: apify/google-search-scraper
-Input: {"queries": ["mortgage broker Farmington Hills Michigan"], "maxPagesPerQuery": 1}
+Input: {"queries": ["[your industry] [your city] [your state]"], "maxPagesPerQuery": 1}
 Output: Top 10 results with titles, URLs, descriptions
 ```
 
@@ -104,7 +104,7 @@ Output: All page content for gap analysis
 **KEYWORD REPORT: [keyword]**
 Monthly searches: ~X
 Competition: Low/Medium/High
-Current Atlantis ranking: #X (or Not ranking)
+Current your business ranking: #X (or Not ranking)
 Top competitor: [domain] — why they rank
 Content needed: [blog/landing page/GBP post]
 Priority: High/Medium/Low
@@ -115,12 +115,12 @@ Estimated time to rank: X months
 2. 
 3.
 
-## Quick Win Tactics for the user's business
+## Quick Win Tactics for Your Business
 1. **Google Business posts** — post every week (rates update, blog highlight, Q&A answer)
-2. **Review requests** — text every closed borrower within 24 hours of closing
-3. **Local pages** — one page per city served (Farmington Hills, Novi, West Bloomfield, etc.)
-4. **Rate pages** — "Current mortgage rates [city] [year]" updated monthly
-5. **FAQ schema** — structured data on common mortgage questions
+2. **Review requests** — text every closed client within 24 hours of completion
+3. **Local pages** — one page per city served (your city, neighboring cities, etc.)
+4. **Service pages** — "Current [your service] [city] [year]" updated monthly
+5. **FAQ schema** — structured data on common industry questions
 
 ## Tracking
 Set up monthly tracking spreadsheet:

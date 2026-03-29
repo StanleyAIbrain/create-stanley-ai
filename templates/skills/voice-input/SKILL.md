@@ -37,7 +37,7 @@ Voice transcription introduces artifacts that have nothing to do with what the p
 | Capitalization errors | random CAPS or no caps | Irrelevant, ignore |
 | Number/symbol confusion | "hashtag" instead of #, "at sign" instead of @ | Translate to symbol |
 | Fragmented grammar | "the thing from yesterday the file" | Context-fill using conversation history |
-| Brand/name misspellings | "stanly ai", "satoshi framework", "openclaw" | Known proper nouns, auto-correct |
+| Brand/name misspellings | "stanly ai", "openclaw" | Known proper nouns from your project — auto-correct |
 
 ---
 
@@ -65,23 +65,19 @@ Do not say "It sounds like you're using voice-to-text" or "I noticed some transc
 
 ---
 
-## the user-Specific Context
+## User-Specific Context
 
-the user (owner: the user's business, SATOSHI crypto framework, StanleyAI) uses voice-to-text exclusively. His messages often:
+The user communicates via voice-to-text exclusively. Their messages often:
 
 - Start mid-thought without context setup
 - Reference "the file", "that thing", "what we were building" — resolve from history
-- Use mortgage/crypto/AI jargon that may be mis-transcribed:
+- Use domain-specific jargon that may be mis-transcribed:
   - "OpenClaw" not "open claw" or "open clause"
-  - "SATOSHI" not "Satoshi" (it's an acronym/framework name)
   - "StanleyAI" not "Stanley AI" or "Stanley eye"
   - "Cowork" not "co-work" or "co worker"
   - "SOUL.md", "CLAUDE.md", "AGENTS.md" — file names, not sentences
   - "LaunchAgent" — macOS process term
-  - "MBS" — mortgage-backed securities
-  - "DTI" — debt-to-income ratio
-  - "LTV" — loan-to-value
-  - "pre-qual" / "pre-approval" — mortgage stages
+  - Add your own domain-specific terms here
 
 - Give instructions that assume context:
   - "do it" = apply the solution we were just discussing
