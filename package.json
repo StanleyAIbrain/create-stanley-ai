@@ -1,0 +1,42 @@
+{
+  "name": "create-stanley-ai",
+  "version": "1.0.0",
+  "description": "Set up StanleyAI — a cognitive framework for Claude with persistent memory, learning loops, and 49+ skills",
+  "author": "StanleyAI <hello@stanleyai.org>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StanleyAIbrain/create-stanley-ai"
+  },
+  "homepage": "https://stanleyai.org",
+  "keywords": [
+    "claude",
+    "ai",
+    "memory",
+    "brain",
+    "skills",
+    "mcp",
+    "anthropic",
+    "claude-code",
+    "persistent-memory",
+    "cognitive-framework"
+  ],
+  "bin": {
+    "create-stanley-ai": "./bin/cli.js"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "bin/",
+    "templates/"
+  ],
+  "scripts": {
+    "start": "node bin/cli.js",
+    "dev": "node bin/cli.js --dev",
+    "doctor": "node bin/cli.js doctor",
+    "update": "node bin/cli.js update"
+  },
+  "dependencies": {}
+}
